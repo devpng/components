@@ -1,0 +1,15 @@
+@import "./components/reports.scss";
+@import "./components/tables";
+
+.label {
+    &--g {
+        color: #554E53;
+    }
+    &--lg {
+        color: #A7A7A7;
+    }
+}
+
+body {
+    background-color: #f5f5f5;
+}
