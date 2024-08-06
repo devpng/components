@@ -1,15 +1,151 @@
 .fusion {
     &-table {
         table {
-            // border-collapse: separate;
-            border-spacing: 0 12px;
+            // border-collapse: initial;
+            // border-spacing: 0 12px;
             border: 1px solid #d5d5d5;
             border-radius: 8px;
+            margin-top: 40px;
 
-            td {
-                background-color: transparent;
-                border: 1px solid transparent;
+            p {
+                font-size: 16px;
+                line-height: 16px;
+                font-weight: 400;
+                margin: 0;
             }
+
+            thead {
+                tr {
+                    border: 1px solid #d5d5d5;
+                    td {
+                        background-color: #fff;
+                        padding: 12px 24px;
+
+                        p {
+                            margin: 0;
+                            color: #A7A7A7;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    border: 1px solid #d5d5d5;
+
+                    th {
+                        background-color: #fff;
+                        border-bottom: 1px solid #d5d5d5;
+                        padding: 12px 24px;
+                    }
+                }
+            }
+
+        }
+        &_rows {
+            .fusion-table {
+                &_user {
+                    display: flex;
+                    justify-content: flex-start;
+
+                    &-image {
+                        width: 35px;
+                        height: 35px;
+                        margin-right: 7px;
+                        border-radius: 100%;
+                    }
+
+                    &-details {
+                        .label--name {
+                            font-size: 16px;
+                            line-height: 16px;
+                            margin-bottom: 7px;
+                            font-weight: 400;
+                            color: #151515;
+                        }
+                        .label--email {
+                            font-size: 14px;
+                            line-height: 14px;
+                            margin: 0;
+                            font-weight: 400;
+                            color: #554E53;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.badge {
+    &--primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        padding: 5px 10px;
+        border-radius: 100px;
+    }
+    &--secondary {
+        border: 1px solid #3661EB;
+        border-radius: 4px;
+        background-color: #F9F5FF;
+        padding: 7px 14px;
+
+        p {
+            color: #3661EB;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 500;
+        }
+    }
+
+    &--active {
+        background-color: rgb(55, 140, 119, .24);
+        color: #378C77;
+    }
+    &_circle {
+        height: 8px;
+        width: 8px;
+        background-color: #378C77;
+        border-radius: 100px;
+        margin-right: 5px;
+    }
+}
+.badge.badge--active {
+    p {
+        margin-bottom: 0;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
+    }
+}
+
+.table-actions {
+    display: flex;
+    align-items: center;
+
+    button {
+        border-radius: 100%;
+        border: none;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+
+        &.table-actions_edit {
+            background-color: #3661EB;
+        }
+        &.table-actions_license {
+            background-color: #378C77;
+        }
+        &.table-actions_delete {
+            background-color: #F04438;
+        }
+
+        &:last-child {
+            margin-right: 0;
         }
     }
 }

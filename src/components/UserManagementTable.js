@@ -9,21 +9,21 @@ export default function UserManagementTable() {
             {
                 id: 1,
                 selected: false,
-                name: "John Doe",
-                title: "Title Zero",
+                name: "Rafael Desuyo",
+                title: "rafael.desuyo@fusion.com",
                 department: "Engineering Team",
-                reportType: "Scheduled",
-                scheduleDate: "Every 9th of the month",
+                status: "active",
+                license: "License One",
                 dateCreated: "04/06/2024"
             },
             {
                 id: 2,
                 selected: false,
-                name: "Leanne Graham",
-                title: "Title One",
+                name: "John Doe",
+                title: "johndoe1996@fusion.com",
                 department: "Design Team",
-                reportType: "One Time",
-                scheduleDate: "Every 7th of the month",
+                status: "active",
+                license: "License Two",
                 dateCreated: "04/06/2024"
             }
         ]
@@ -39,16 +39,10 @@ export default function UserManagementTable() {
                         <Table>
                             <thead bgColor="transparent">
                                 <tr>
-                                    <td className="report-table_columns">
-                                        <input
-                                            className="report-table_checkbox"
-                                            type='checkbox'
-                                        />
-                                    </td>
-                                    <td><p>Report Name & Author Name</p></td>
+                                    <td><p>User Details</p></td>
                                     <td><p>Department</p></td>
-                                    <td><p>Report Type</p></td>
-                                    <td><p>Schedule Date</p></td>
+                                    <td><p>Status</p></td>
+                                    <td><p>Licenses</p></td>
                                     <td><p>Date Created</p></td>
                                     <td><p>Actions</p></td>
                                 </tr>
@@ -59,25 +53,34 @@ export default function UserManagementTable() {
                                         {reports.map((report) => {
                                             console.log(report, 'hello');
                                             return (
-                                                <tr key={report.id} className="report-table_rows">
-                                                    <th className="report-table_columns">
-                                                        <input
-                                                            className="report-table_checkbox"
-                                                            type='checkbox'
-                                                            // onChange={handleOnChange}
-                                                        />
+                                                <tr key={report.id} className="fusion-table_rows">
+                                                    <th >
+                                                        <div className="fusion-table_user">
+                                                            <img className="fusion-table_user-image" src="./avatar.png" />
+                                                            <div className="fusion-table_user-details">
+                                                                <p className="label--name">{report.name}</p>
+                                                                <p className="label--email">{report.title}</p>
+                                                            </div>
+                                                        </div>
                                                     </th>
-                                                    <th ><p className="label--g">{report.title}</p><p className="label--lg">{report.name}</p></th>
                                                     <th className="report-table_columns"><p>{report.department}</p></th>
-                                                    <th className="report-table_columns"><p>{report.reportType}</p></th>
-                                                    <th className="report-table_columns"><p>{report.scheduleDate}</p></th>
+                                                    <th className="report-table_columns">
+                                                        <div className="badge badge--primary badge--active">
+                                                            <div className="badge_circle"></div>
+                                                            <p>{report.status}</p>
+                                                        </div>
+                                                    </th>
+                                                    <th className="report-table_columns">
+                                                        <div className="badge badge--secondary">
+                                                            <p>{report.license}</p>
+                                                        </div>
+                                                    </th>
                                                     <th className="report-table_columns"><p>{report.dateCreated}</p></th>
                                                     <th className="report-table_columns">
-                                                        <div className="report-table_actions">
-                                                            <button><img src="/eye.png"/></button>
-                                                            <button><img src="/star.png"/></button>
-                                                            <button><img src="/download.png"/></button>
-                                                            <button><img src="/more-horizontal.png"/></button>
+                                                        <div className="table-actions">
+                                                            <button className="table-actions_edit"><img src="/edit.svg"/></button>
+                                                            <button className="table-actions_license"><img src="/clipboard.svg"/></button>
+                                                            <button className="table-actions_delete"><img src="/trash.svg"/></button>
                                                         </div>
                                                     </th>
                                                 </tr>
