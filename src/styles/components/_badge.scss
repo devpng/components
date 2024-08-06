@@ -1,0 +1,41 @@
+.badge {
+    &-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        padding: 5px 10px;
+        border-radius: 100px;
+
+        &_circle {
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            margin-right: 7px;
+        }
+
+        &--success {
+            background-color: rgb(55, 140, 119, .24);
+            color: #378C77;
+
+            .badge-primary_circle {
+                background-color: #378C77;
+            }
+        }
+        &--warning {
+            background-color: rgb(242, 134, 34, .24);
+            color: #F28622;
+
+            .badge-primary_circle {
+                background-color: #F28622;
+            }
+        }
+
+        &_text {
+            margin: 0;
+            font-size: 12px;
+            line-height: 12px;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+button {
+    height: 40px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        margin: 0;
+    }
+
+    &.button {
+        &--primary {
+            background-color: #3661EB;
+            border: 1px solid #3661EB;
+            color: #FFF;
+        }
+        &--secondary {
+            background-color: #FFF;
+            border: 1px solid #3661EB;
+            color: #3661EB;
+        }
+        &--tertiary {
+            background-color: #FFF;
+            border: 1px solid #FFF;
+            color: #3661EB;
+        }
+    }
+}
