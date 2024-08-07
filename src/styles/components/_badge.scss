@@ -34,8 +34,22 @@
         &_text {
             margin: 0;
             font-size: 12px;
-            line-height: 12px;
             font-weight: 500;
+        }
+    }
+
+    &-secondary {
+        border: 1px solid #3661EB;
+        border-radius: 4px;
+        background-color: #F9F5FF;
+        padding: 7px 14px;
+
+        p {
+            color: #3661EB;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 500;
+            margin: 0;
         }
     }
 }

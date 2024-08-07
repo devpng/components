@@ -63,24 +63,24 @@ export default function UserManagementTable() {
                                                             </div>
                                                         </div>
                                                     </th>
-                                                    <th className="report-table_columns"><p>{report.department}</p></th>
+                                                    <th className="report-table_columns"><p className="report-table_text">{report.department}</p></th>
                                                     <th className="report-table_columns">
-                                                        <div className="badge badge--primary badge--active">
-                                                            <div className="badge_circle"></div>
-                                                            <p>{report.status}</p>
+                                                        <div className="badge-primary badge-primary--success">
+                                                            <div className="badge-primary_circle"></div>
+                                                            <p className="badge-primary_text">{report.status}</p>
                                                         </div>
                                                     </th>
                                                     <th className="report-table_columns">
-                                                        <div className="badge badge--secondary">
+                                                        <div className="badge-secondary">
                                                             <p>{report.license}</p>
                                                         </div>
                                                     </th>
-                                                    <th className="report-table_columns"><p>{report.dateCreated}</p></th>
+                                                    <th className="report-table_columns"><p className="report-table_text">{report.dateCreated}</p></th>
                                                     <th className="report-table_columns">
                                                         <div className="table-actions">
-                                                            <button className="table-actions_edit"><img src="/edit.svg"/></button>
-                                                            <button className="table-actions_license"><img src="/clipboard.svg"/></button>
-                                                            <button className="table-actions_delete"><img src="/trash.svg"/></button>
+                                                            <button className="btn-icon btn-icon--primary"><img src="/edit.svg"/></button>
+                                                            <button className="btn-icon btn-icon--success"><img src="/clipboard.svg"/></button>
+                                                            <button className="btn-icon btn-icon--danger"><img src="/trash.svg"/></button>
                                                         </div>
                                                     </th>
                                                 </tr>

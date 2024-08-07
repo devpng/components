@@ -13,9 +13,9 @@ export default function PageHeader() {
                 </div>
             </div>
             <div className="header-group_actions">
-                <button className="button--tertiary">Add Department</button>
-                <button className="button--secondary">Add License</button>
-                <button className="button--primary">Add License Request</button>
+                <button className="btn-base btn-base--tertiary">Add Department</button>
+                <button className="btn-base btn-base--secondary">Add License</button>
+                <button className="btn-base btn-base--primary">Add License Request</button>
             </div>
         </div>
     )
