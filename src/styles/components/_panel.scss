@@ -1,0 +1,34 @@
+.st-panel {
+    width: 400px;
+    border-left: 1px solid #d5d5d5;
+    height: 100%;
+    margin-left: 60px;
+
+    &__header {
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #d5d5d5;
+
+        h5 {
+            font-size: 24px;
+            line-height: 24px;
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #151515;
+        }
+        p {
+            margin-bottom: 0;
+            color: #554E53;
+        }
+    }
+    &__content {
+        &-header {
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

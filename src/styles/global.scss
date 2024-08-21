@@ -3,6 +3,9 @@
 @import "./components/header";
 @import "./components/badge";
 @import "./components/buttons";
+@import "./components/cards";
+@import "./components/panel";
+@import "./components/accordion";
 
 .label {
     &--g {
@@ -10,6 +13,15 @@
     }
     &--lg {
         color: #A7A7A7;
+    }
+}
+
+.st-flex {
+    display: flex;
+    align-items: center;
+
+    &--space-between {
+        justify-content: space-between;
     }
 }
 
